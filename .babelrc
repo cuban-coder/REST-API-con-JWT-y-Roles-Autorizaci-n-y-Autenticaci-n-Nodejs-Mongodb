@@ -1,0 +1,5 @@
+//Nos permite decir que presets estamos utilizando, es decir que es lo que va a traducir babel 
+
+{
+    "presets": ["@babel/preset-env"]
+}

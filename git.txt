@@ -1,0 +1,6 @@
+Los tres estados de git 
+
+working directory
+staging area
+git directory (repository)
+
