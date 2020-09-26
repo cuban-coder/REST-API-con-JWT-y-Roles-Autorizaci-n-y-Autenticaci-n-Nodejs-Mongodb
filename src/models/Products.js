@@ -11,3 +11,5 @@ const productSchema = new Schema({
 })
 
 export default model('Product', productSchema);
+
+

@@ -7,8 +7,8 @@ import pkg from '../package.json'
 import {createRoles} from './libs/initialSetup'
 
 import productsRoutes from './routes/products.routes'
-
 import authRoutes from './routes/auth.routes'
+import usersRoutes from './routes/user.routes'
 const app = express()
 createRoles();
 //Este método es para colocarle un nombre a una variable  y un valor a la variable 
@@ -28,5 +28,6 @@ app.get('/', (req,res) => {
 
 app.use('/api/products',productsRoutes);
 app.use('/api/auth',authRoutes);
+app.use('/api/users', usersRoutes);
 
 export default app;

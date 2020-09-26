@@ -9,8 +9,8 @@ router.get('/', productsCtrl.getProducts);
 
 router.get('/:productId', productsCtrl.getProductByID);
 
-router.put('/:productId',authJwt.verifyToken, productsCtrl.updateProductById);
+router.put('/:productId',[authJwt.verifyToken, authJwt.isAdmin], productsCtrl.updateProductById);
 
-router.delete('/:productId',[authJwt.verifyToken, authJwt.isModerator], productsCtrl.deleteProductById);
+router.delete('/:productId',[authJwt.verifyToken, authJwt.isAdmin], productsCtrl.deleteProductById);
 
 export default router;
